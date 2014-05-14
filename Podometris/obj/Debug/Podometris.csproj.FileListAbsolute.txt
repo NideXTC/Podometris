@@ -19,3 +19,22 @@ C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometr
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\obj\Debug\Podometris.dll
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\obj\Debug\Podometris.pdb
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\obj\Debug\XapCacheFile.xml
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Assets\ApplicationIcon.png
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Podometris.dll
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Podometris.pdb
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\AppManifest.xaml
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\Bin\Debug\Podometris_Debug_AnyCPU.xap
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\App.g.cs
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\MainPage.g.cs
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\Podometris.g.resources
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\Podometris.AppResources.resources
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\Podometris.csproj.GenerateResource.Cache
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\Podometris.dll
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\Podometris.pdb
+C:\Users\Jonathan\Documents\GitHub\Podometris\Podometris\obj\Debug\XapCacheFile.xml
