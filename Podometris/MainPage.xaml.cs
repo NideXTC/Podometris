@@ -83,7 +83,7 @@ namespace Podometris
 
         ShellTile.ActiveTiles.First().Update(new IconicTileData()
         {
-          Title = "WP8Runner",
+          Title = "Podometris",
           WideContent1 = string.Format("{0:f2} km", _kilometres),
           WideContent2 = string.Format("{0:f0} calories", _kilometres * 65),
         });

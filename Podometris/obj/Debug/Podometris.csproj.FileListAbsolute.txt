@@ -6,8 +6,6 @@ C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometr
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\Assets\Tiles\IconicTileSmall.png
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\Podometris.dll
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\Podometris.pdb
-C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\Podometris.dll.CodeAnalysisLog.xml
-C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\Podometris.dll.lastcodeanalysissucceeded
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\AppManifest.xaml
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\Properties\WMAppManifest.xml
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\Bin\Debug\Podometris_Debug_AnyCPU.xap
