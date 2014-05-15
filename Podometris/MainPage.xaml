@@ -76,9 +76,8 @@
 
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
-        
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Assets/Images/feature.calendar.png" Text="Objectifs"/>
+            <shell:ApplicationBarIconButton Click="ApplicationBarIconButton_Click"  IconUri="/Assets/Images/feature.calendar.png" Text="Objectifs"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/Images/upload.png" Text="Progression"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/Images/share.png" Text="Partager"/>
             <shell:ApplicationBarIconButton IconUri="/Assets/Images/close.png"  Text="Quitter"/>

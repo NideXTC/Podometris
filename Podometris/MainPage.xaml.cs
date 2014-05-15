@@ -96,5 +96,11 @@ namespace Podometris
       _line.Path.Add(coord);
       _previousPositionChangeTick = System.Environment.TickCount;
     }
+
+    // List of objectives
+    private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }
