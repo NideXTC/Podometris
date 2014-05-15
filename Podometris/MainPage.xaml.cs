@@ -102,5 +102,10 @@ namespace Podometris
     {
 
     }
+
+    private void  ApplicationBarIconButton_Exit(object sender, EventArgs e)
+    {
+        Application.Current.Terminate();    
+    }
   }
 }
