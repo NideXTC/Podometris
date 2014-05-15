@@ -17,3 +17,4 @@ C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometr
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\obj\Release\Podometris.dll
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\obj\Release\Podometris.pdb
 C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\obj\Release\XapCacheFile.xml
+C:\Users\Alexis DUCERF\Documents\Visual Studio 2013\Projects\Podometris\Podometris\obj\Release\Objectives.g.cs

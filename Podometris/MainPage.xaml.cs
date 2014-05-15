@@ -98,11 +98,12 @@ namespace Podometris
     }
 
     // List of objectives
-    private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+    private void ApplicationBarIconButton_Objectives(object sender, EventArgs e)
     {
-
+        NavigationService.Navigate(new Uri("/Objectives.xaml", UriKind.Relative));
     }
 
+    // Quit the application
     private void  ApplicationBarIconButton_Exit(object sender, EventArgs e)
     {
         Application.Current.Terminate();    

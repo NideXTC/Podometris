@@ -1,0 +1,108 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Podometris.Objectives"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets/ApplicationIconLarge.png" Height="50"/>
+                <TextBlock Text="Podometris" VerticalAlignment="Center"
+                    Margin="10 0 0 0"
+                    FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here.-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,0,14,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Bind the list box to the observable collection. -->
+            <ListBox x:Name="ItemsListBox" ItemsSource="{Binding Items}" 
+                     Grid.Row="0" Margin="12, 0, 12, 0" Width="440">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HorizontalAlignment="Stretch" Width="440">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox
+                                IsChecked="{Binding IsComplete, Mode=TwoWay}"
+                                Grid.Column="0"
+                                VerticalAlignment="Center"/>
+                            <TextBlock
+                                Text="{Binding ItemName}"
+                                FontSize="{StaticResource PhoneFontSizeLarge}"
+                                Grid.Column="1"
+                                VerticalAlignment="Center"/>
+                            <Button
+                                Grid.Column="2"
+                                x:Name="deleteTaskButton"
+                                BorderThickness="0"                                
+                                Margin="0"
+                                Click="deleteTaskButton_Click">
+                                <Image Source="appbar.delete.rest.png"/>
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBox
+                    x:Name="km"                    
+                    Grid.Column="0"
+                    Text="Km"
+                    FontFamily="{StaticResource PhoneFontFamilyLight}" />
+                <TextBox
+                    x:Name="time"                    
+                    Grid.Column="0"
+                    Text="Temps (min)"
+                    FontFamily="{StaticResource PhoneFontFamilyLight}" Margin="0,77,0,-77" />
+
+
+                <Button 
+                    Content="add"
+                    x:Name="newAddButton"
+                    Click="newAddButton_Click" Margin="276,154,0,-154"/>
+            </Grid>
+        </Grid>
+    </Grid>
+
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton Click="ApplicationBarIconButton_MainPage"  IconUri="/Assets/Images/like.png" Text="Carte"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/Images/upload.png" Text="Progression"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/Images/share.png" Text="Partager"/>
+            <shell:ApplicationBarIconButton  Click="ApplicationBarIconButton_Exit" IconUri="/Assets/Images/close.png"  Text="Quitter"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
