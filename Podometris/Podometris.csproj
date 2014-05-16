@@ -110,6 +110,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model.cs" />
     <Compile Include="Objectives.xaml.cs">
       <DependentUpon>Objectives.xaml</DependentUpon>
     </Compile>

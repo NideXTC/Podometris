@@ -15,12 +15,23 @@ using System.Xml.Serialization;
 using System.IO.IsolatedStorage;
 using System.Collections.ObjectModel;
 
+
 namespace Podometris
 {
     public partial class Objectives : PhoneApplicationPage
     {
         private ObservableCollection<Stats> items ;
 
+         public ObservableCollection<Model> Collection { get; set; }
+       
+        private void GenerateDatas()
+        {
+            this.Collection.Add(new Model(0, 1));
+            this.Collection.Add(new Model(1, 2));
+            this.Collection.Add(new Model(2, 3));
+            this.Collection.Add(new Model(3, 4));
+        }
+    
 
         public ObservableCollection<Stats> Items
         {
@@ -34,6 +45,8 @@ namespace Podometris
             InitializeComponent();
             Items = new ObservableCollection<Stats>();
             Items = this.Read();
+            Collection = new ObservableCollection<Model>();
+            GenerateDatas();
         }
 
         private ObservableCollection<Stats> Read()
@@ -75,16 +88,6 @@ namespace Podometris
             Application.Current.Terminate();
         }
 
-
-        private  void newAddButton_Click(object sender, RoutedEventArgs e)
-        {
-            try{
-                Stats stat = new Stats() { Km = int.Parse(this.km.Text), Time = this.time.Text, Date = DateTime.Now };
-                this.Write(stat);
-            }catch(Exception){
-              
-            }
-        }
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
