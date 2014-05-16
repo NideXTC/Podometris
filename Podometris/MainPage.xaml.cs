@@ -1,6 +1,7 @@
 ﻿using Microsoft.Phone.Controls;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 using NExtra.Geo;
 using System;
 using System.Device.Location;
@@ -107,6 +108,17 @@ namespace Podometris
     private void  ApplicationBarIconButton_Exit(object sender, EventArgs e)
     {
         Application.Current.Terminate();    
+    }
+
+    private void ApplicationBarIconButton_Share(object sender, EventArgs e)
+    {
+        if (!_timer.IsEnabled)
+        {
+            ShareStatusTask shareStatusTask = new ShareStatusTask();
+            shareStatusTask.Status = "J'ai parcouru "+string.Format("{0:f2} km", _kilometres)+"km et perdu "+string.Format("{0:f0}", _kilometres * 65)+" calories " ;
+            shareStatusTask.Show();
+        }
+       
     }
   }
 }

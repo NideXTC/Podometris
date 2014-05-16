@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
 
 
@@ -48,23 +48,13 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="100" />
                             </Grid.ColumnDefinitions>
-                            <CheckBox
-                                IsChecked="{Binding IsComplete, Mode=TwoWay}"
-                                Grid.Column="0"
-                                VerticalAlignment="Center"/>
+                            
                             <TextBlock
-                                Text="{Binding ItemName}"
+                                Text="{Binding Km}"
                                 FontSize="{StaticResource PhoneFontSizeLarge}"
                                 Grid.Column="1"
                                 VerticalAlignment="Center"/>
-                            <Button
-                                Grid.Column="2"
-                                x:Name="deleteTaskButton"
-                                BorderThickness="0"                                
-                                Margin="0"
-                                Click="deleteTaskButton_Click">
-                                <Image Source="appbar.delete.rest.png"/>
-                            </Button>
+                            
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -75,22 +65,20 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
+                <TextBlock>Km</TextBlock>
                 <TextBox
                     x:Name="km"                    
                     Grid.Column="0"
-                    Text="Km"
-                    FontFamily="{StaticResource PhoneFontFamilyLight}" />
+                    FontFamily="{StaticResource PhoneFontFamilyLight}" Margin="0,26,0,-26" />
+                <TextBlock Margin="0,103,0,-103">Temps (min)</TextBlock>
                 <TextBox
                     x:Name="time"                    
                     Grid.Column="0"
-                    Text="Temps (min)"
-                    FontFamily="{StaticResource PhoneFontFamilyLight}" Margin="0,77,0,-77" />
-
-
+                    FontFamily="{StaticResource PhoneFontFamilyLight}" Margin="0,129,0,-129" />
                 <Button 
                     Content="add"
                     x:Name="newAddButton"
-                    Click="newAddButton_Click" Margin="276,154,0,-154"/>
+                   Click="newAddButton_Click" Margin="276,206,0,-206"/>
             </Grid>
         </Grid>
     </Grid>
