@@ -1,13 +1,5 @@
 namespace NExtra.Geo
 {
-    /// <summary>
-    /// This enum represents distance units that are
-    /// currently used by the Geo namespace classes.
-    /// </summary>
-    /// <remarks>
-    /// Author:     Daniel Saidi [daniel.saidi@gmail.com]
-    /// Link:       http://www.dotnextra.com
-    /// </remarks>
     public enum DistanceUnit
     {
         /// <summary>

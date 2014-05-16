@@ -1,13 +1,5 @@
 ﻿namespace NExtra.Geo
 {
-    /// <summary>
-    /// This interface can be implemented by all classes
-    /// that can convert angles in various ways.
-    /// </summary>
-    /// <remarks>
-    /// Author:     Daniel Saidi [daniel.saidi@gmail.com]
-    /// Link:       http://www.dotnextra.com
-    /// </remarks>
     public interface IAngleConverter
     {
         /// <summary>

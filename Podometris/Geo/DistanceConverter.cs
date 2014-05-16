@@ -1,12 +1,5 @@
 namespace NExtra.Geo
 {
-    /// <summary>
-    /// This class can be used to convert distance units.
-    /// </summary>
-    /// <remarks>
-    /// Author:     Daniel Saidi [daniel.saidi@gmail.com]
-    /// Link:       http://www.dotnextra.com
-    /// </remarks>
     public class DistanceConverter : IDistanceConverter
     {   
         /// <summary>

@@ -1,12 +1,5 @@
 ﻿namespace NExtra.Geo
 {
-    /// <summary>
-    /// This static class contains geo-related constants.
-    /// </summary>
-    /// <remarks>
-    /// Author:     Daniel Saidi [daniel.saidi@gmail.com]
-    /// Link:       http://www.dotnextra.com
-    /// </remarks>
     public static class GeoConstants
     {
         /// <summary>

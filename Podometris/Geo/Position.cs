@@ -1,13 +1,6 @@
 using System.Device.Location;
 namespace NExtra.Geo
 {
-    /// <summary>
-    /// This class represents a position with a latitude and longitude.
-    /// </summary>
-    /// <remarks>
-    /// Author:     Daniel Saidi [daniel.saidi@gmail.com]
-    /// Link:       http://www.dotnextra.com
-    /// </remarks>
     public class Position
     {
         /// <summary>

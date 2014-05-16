@@ -2,14 +2,6 @@ using System;
 
 namespace NExtra.Geo
 {
-    /// <summary>
-    /// This class can be used to convert angles in
-    /// various ways.
-    /// </summary>
-    /// <remarks>
-    /// Author:     Daniel Saidi [daniel.saidi@gmail.com]
-    /// Link:       http://www.dotnextra.com
-    /// </remarks>
     public class AngleConverter : IAngleConverter
     {
         /// <summary>
