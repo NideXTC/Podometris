@@ -4,8 +4,11 @@ using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using NExtra.Geo;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Device.Location;
 using System.Diagnostics;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
@@ -49,6 +52,22 @@ namespace Podometris
         _watcher.Stop();
         _timer.Stop();
         StartButton.Content = "Start";
+          
+       TimeSpan runTime = TimeSpan.FromMilliseconds(System.Environment.TickCount - _startTime);
+
+        try
+        {
+            if (runTime.TotalSeconds > 0)
+            {
+                Stats stat = new Stats() { Km = _kilometres, Time = runTime.ToString(@"hh\:mm\:ss"), Date = DateTime.Now };
+                this.Write(stat);
+            }
+        }
+        catch (Exception)
+        {
+
+        }
+
       }
       else
       {
@@ -57,6 +76,35 @@ namespace Podometris
         _startTime = System.Environment.TickCount;
         StartButton.Content = "Stop";
       }
+    }
+
+    private ObservableCollection<Stats> Read()
+    {
+        if (IsolatedStorageSettings.ApplicationSettings.Contains("stats"))
+        {
+            List<Stats> myList = new List<Stats>();
+            myList = (List<Stats>)IsolatedStorageSettings.ApplicationSettings["stats"];
+            ObservableCollection<Stats> myObs = new ObservableCollection<Stats>(myList);
+            return myObs;
+        }
+        else
+        {
+            return new ObservableCollection<Stats>();
+        }
+
+    }
+
+
+    private void Write(Stats stats)
+    {
+        ObservableCollection<Stats> data = this.Read();
+        data.Add(stats);
+
+        IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
+        settings.Remove("stats");
+        settings.Add("stats", data.ToList());
+        settings.Save();
+
     }
 
     //ID_CAP_LOCATION
@@ -114,8 +162,9 @@ namespace Podometris
     {
         if (!_timer.IsEnabled)
         {
+            TimeSpan runTime = TimeSpan.FromMilliseconds(System.Environment.TickCount - _startTime);
             ShareStatusTask shareStatusTask = new ShareStatusTask();
-            shareStatusTask.Status = "J'ai parcouru "+string.Format("{0:f2} km", _kilometres)+"km et perdu "+string.Format("{0:f0}", _kilometres * 65)+" calories " ;
+            shareStatusTask.Status = "J'ai parcouru " + string.Format("{0:f2} km", _kilometres) + " en " + runTime.ToString(@"hh\:mm\:ss") + " et perdu " + string.Format("{0:f0}", _kilometres * 65) + " calories ";
             shareStatusTask.Show();
         }
        

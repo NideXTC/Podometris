@@ -49,7 +49,6 @@ namespace Podometris
             {
                 return new ObservableCollection<Stats>();
             }
-
         }
 
         
@@ -61,8 +60,7 @@ namespace Podometris
             IsolatedStorageSettings settings = IsolatedStorageSettings.ApplicationSettings;
             settings.Remove("stats");
             settings.Add("stats", data.ToList());
-            settings.Save();
-            
+            settings.Save();            
         }
 
         // List of objectives
@@ -81,12 +79,11 @@ namespace Podometris
         private  void newAddButton_Click(object sender, RoutedEventArgs e)
         {
             try{
-                Stats stat = new Stats() { Km = int.Parse(this.km.Text), Time = int.Parse(this.time.Text), Date = DateTime.Now };
+                Stats stat = new Stats() { Km = int.Parse(this.km.Text), Time = this.time.Text, Date = DateTime.Now };
                 this.Write(stat);
             }catch(Exception){
               
             }
-          
         }
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)

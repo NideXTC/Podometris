@@ -50,7 +50,7 @@
                 HorizontalAlignment="Center"/>
 
                     <!-- time -->
-                    <TextBlock Text="Time:" Grid.Column="2"/>
+                    <TextBlock Text="Temps:" Grid.Column="2"/>
                     <TextBlock Text="00:00:00" Grid.Column="3" x:Name="timeLabel"
                 HorizontalAlignment="Center"/>
 
@@ -60,7 +60,7 @@
                 HorizontalAlignment="Center" Grid.Row="1"/>
 
                     <!-- pace -->
-                    <TextBlock Text="Pace:" Grid.Column="2" Grid.Row="1"/>
+                    <TextBlock Text="Rythme:" Grid.Column="2" Grid.Row="1"/>
                     <TextBlock Text="00:00" Grid.Column="3" x:Name="paceLabel"
                 HorizontalAlignment="Center" Grid.Row="1"/>
 
