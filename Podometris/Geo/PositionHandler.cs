@@ -2,15 +2,6 @@ using System;
 
 namespace NExtra.Geo
 {
-    /// <summary>
-    /// This class can be used to calculate the distance
-    /// and bearing between two positions.
-    /// </summary>
-    /// <remarks>
-    /// Author:     Daniel Saidi [daniel.saidi@gmail.com]
-    /// Link:       http://www.dotnextra.com
-    /// Link:       http://myxaab.wordpress.com/2010/09/02/calculate-distance-bearing-between-geolocation/
-    /// </remarks>
     public class PositionHandler : IBearingCalculator, IDistanceCalculator, IRhumbBearingCalculator, IRhumbDistanceCalculator
     {
         private readonly AngleConverter angleConverter;
