@@ -22,15 +22,7 @@ namespace Podometris
     {
         private ObservableCollection<Stats> items ;
 
-         public ObservableCollection<Model> Collection { get; set; }
-       
-        private void GenerateDatas()
-        {
-            this.Collection.Add(new Model(0, 1));
-            this.Collection.Add(new Model(1, 2));
-            this.Collection.Add(new Model(2, 3));
-            this.Collection.Add(new Model(3, 4));
-        }
+        public ObservableCollection<Model> Collection { get; set; }
     
 
         public ObservableCollection<Stats> Items
@@ -45,9 +37,9 @@ namespace Podometris
             InitializeComponent();
             Items = new ObservableCollection<Stats>();
             Items = this.Read();
-            Collection = new ObservableCollection<Model>();
-            GenerateDatas();
+           
         }
+
 
         private ObservableCollection<Stats> Read()
         {

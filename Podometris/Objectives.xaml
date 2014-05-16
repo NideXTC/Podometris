@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:sparrow="clr-namespace:Sparrow.Chart;assembly=Sparrow.Chart.WP8.45"
+    xmlns:local="clr-namespace:Podometris"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -14,7 +15,9 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
-
+    <phone:PhoneApplicationPage.Resources>
+        
+    </phone:PhoneApplicationPage.Resources>
 
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -36,7 +39,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,0,14,0">
 
 
-            <sparrow:SparrowChart>
+           <!-- <sparrow:SparrowChart>
                 <sparrow:SparrowChart.XAxis>
                     <sparrow:LinearXAxis/>
                 </sparrow:SparrowChart.XAxis>
@@ -51,6 +54,19 @@
                         <sparrow:DoublePoint Data="3" Value="4"/>
                     </sparrow:LineSeries.Points>
                 </sparrow:LineSeries>
+            </sparrow:SparrowChart> -->
+
+            <sparrow:SparrowChart>
+                <sparrow:SparrowChart.DataContext>
+                    <local:ViewModel/>
+                </sparrow:SparrowChart.DataContext>
+                <sparrow:SparrowChart.XAxis>
+                    <sparrow:LinearXAxis/>
+                </sparrow:SparrowChart.XAxis>
+                <sparrow:SparrowChart.YAxis>
+                    <sparrow:LinearYAxis/>
+                </sparrow:SparrowChart.YAxis>
+                <sparrow:LineSeries PointsSource="{Binding Collection}" XPath="X" YPath="Y"/>
             </sparrow:SparrowChart>
         </Grid>
     </Grid>
