@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{122f1de5-571c-4e28-abbe-13815d7545cd}" Title="WP8Runner" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="WP8Runner author" Description="Sample description" Publisher="WP8Runner" PublisherID="{7b75390a-3d40-4f48-8c54-35ee4efd72d7}">
+  <App xmlns="" ProductID="{122f1de5-571c-4e28-abbe-13815d7545cd}" Title="Podometris" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Podometris" Description="Sample description" Publisher="Podometris" PublisherID="{7b75390a-3d40-4f48-8c54-35ee4efd72d7}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

@@ -110,12 +110,17 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model.cs" />
+    <Compile Include="Objectives.xaml.cs">
+      <DependentUpon>Objectives.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Stats.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -126,8 +131,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Objectives.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
@@ -141,6 +151,43 @@
     <Content Include="Assets\ApplicationIcon110x110.png" />
     <Content Include="Assets\ApplicationIcon202x202.png" />
     <Content Include="Assets\ApplicationIconLarge.png" />
+    <Content Include="Assets\Images\add.png" />
+    <Content Include="Assets\Images\back.png" />
+    <Content Include="Assets\Images\basecircle.png" />
+    <Content Include="Assets\Images\cancel.png" />
+    <Content Include="Assets\Images\check.png" />
+    <Content Include="Assets\Images\close.png" />
+    <Content Include="Assets\Images\delete.png" />
+    <Content Include="Assets\Images\download.png" />
+    <Content Include="Assets\Images\edit.png" />
+    <Content Include="Assets\Images\favs.addto.png" />
+    <Content Include="Assets\Images\favs.png" />
+    <Content Include="Assets\Images\feature.alarm.png" />
+    <Content Include="Assets\Images\feature.calendar.png" />
+    <Content Include="Assets\Images\feature.camera.png" />
+    <Content Include="Assets\Images\feature.email.png" />
+    <Content Include="Assets\Images\feature.phone.png" />
+    <Content Include="Assets\Images\feature.search.png" />
+    <Content Include="Assets\Images\feature.settings.png" />
+    <Content Include="Assets\Images\feature.video.png" />
+    <Content Include="Assets\Images\folder.png" />
+    <Content Include="Assets\Images\like.png" />
+    <Content Include="Assets\Images\microphone.png" />
+    <Content Include="Assets\Images\minus.png" />
+    <Content Include="Assets\Images\new.png" />
+    <Content Include="Assets\Images\next.png" />
+    <Content Include="Assets\Images\overflowdots.png" />
+    <Content Include="Assets\Images\questionmark.png" />
+    <Content Include="Assets\Images\refresh.png" />
+    <Content Include="Assets\Images\save.png" />
+    <Content Include="Assets\Images\share.png" />
+    <Content Include="Assets\Images\stop.png" />
+    <Content Include="Assets\Images\sync.png" />
+    <Content Include="Assets\Images\transport.ff.png" />
+    <Content Include="Assets\Images\transport.pause.png" />
+    <Content Include="Assets\Images\transport.play.png" />
+    <Content Include="Assets\Images\transport.rew.png" />
+    <Content Include="Assets\Images\upload.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -156,7 +203,15 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="README_FIRST.txt" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="stats.xml" />
     <Content Include="TextFile1.txt" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AppResources.resx">
@@ -166,6 +221,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Sparrow.Chart.WP8.45">
+      <HintPath>..\packages\Sparrow.Chart.WP8.13.1.0.113\lib\windowsphone8\Sparrow.Chart.WP8.45.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
