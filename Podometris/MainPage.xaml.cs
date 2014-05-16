@@ -122,7 +122,9 @@ namespace Podometris
         var millisPerKilometer = (1000.0 / distance) * (System.Environment.TickCount - _previousPositionChangeTick);
         _kilometres += distance / 1000.0;
 
-        paceLabel.Text = TimeSpan.FromMilliseconds(millisPerKilometer).ToString(@"mm\:ss");
+        //paceLabel.Text = TimeSpan.FromMilliseconds(millisPerKilometer).ToString(@"mm\:ss");
+        TimeSpan runTime = TimeSpan.FromMilliseconds(System.Environment.TickCount - _startTime);
+        paceLabel.Text = string.Format("{0:f2}",_kilometres/runTime.TotalHours);
         distanceLabel.Text = string.Format("{0:f2} km", _kilometres);
         caloriesLabel.Text = string.Format("{0:f0}", _kilometres * 65);
 

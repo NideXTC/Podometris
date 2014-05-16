@@ -38,7 +38,7 @@
             ZoomLevel="18"/>
 
             <!-- run statistics -->
-            <Grid Background="#99000000" Margin="20" 
+            <Grid Background="#99000000" Margin="30,0,10,23" 
             VerticalAlignment="Bottom">
                 <Grid Margin="20"
               util:GridUtils.RowDefinitions="40, 40, Auto"
@@ -60,8 +60,8 @@
                 HorizontalAlignment="Center" Grid.Row="1"/>
 
                     <!-- pace -->
-                    <TextBlock Text="Rythme:" Grid.Column="2" Grid.Row="1"/>
-                    <TextBlock Text="00:00" Grid.Column="3" x:Name="paceLabel"
+                    <TextBlock Text="km/h:" Grid.Column="2" Grid.Row="1"/>
+                    <TextBlock Text="0km/h" Grid.Column="4" x:Name="paceLabel"
                 HorizontalAlignment="Center" Grid.Row="1"/>
 
                     <Button Content="Start"
