@@ -61,7 +61,7 @@
 
                     <!-- pace -->
                     <TextBlock Text="km/h:" Grid.Column="2" Grid.Row="1"/>
-                    <TextBlock Text="0km/h" Grid.Column="4" x:Name="paceLabel"
+                    <TextBlock Text="0" Grid.Column="4" x:Name="paceLabel"
                 HorizontalAlignment="Center" Grid.Row="1"/>
 
                     <Button Content="Start"
